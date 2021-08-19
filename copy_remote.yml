@@ -1,0 +1,11 @@
+---
+ - name: Copy file on remote file
+   hosts: test
+   become: true
+   tasks:
+   - copy:
+       src: /etc/apt/sources.list
+       dest: /etc/apt/sources.list
+       owner: root
+       mode: 644
+       backup: yes
